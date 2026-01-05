@@ -13,8 +13,12 @@ export class BootstrapAgent {
 
   constructor() {
     this.model = new ChatOpenAI({
-      model: "gpt-4o",
+      model: process.env.LLM_MODEL || "gpt-4o",
       temperature: 0,
+      apiKey: process.env.LLM_API_KEY,
+      configuration: {
+        baseURL: process.env.LLM_BASE_URL,
+      },
     });
     this.modelWithTools = this.model.bindTools(this.tools);
   }

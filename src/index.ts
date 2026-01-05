@@ -3,10 +3,10 @@ import { BootstrapAgent } from "@/agents/BootstrapAgent.ts";
 console.log("Starting Agent Boilerplate...");
 
 // Check for API Key
-if (!process.env.OPENAI_API_KEY) {
-  console.error("Error: OPENAI_API_KEY is not set in the environment.");
+if (!process.env.LLM_API_KEY) {
+  console.error("Error: LLM_API_KEY is not set in the environment.");
   console.error(
-    "Please set it (e.g. 'export OPENAI_API_KEY=sk-...') and try again."
+    "Please set it (e.g. 'export LLM_API_KEY=sk-...') and try again."
   );
   process.exit(1);
 }
