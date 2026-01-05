@@ -1,6 +1,9 @@
 {
   "name": "agent-boilerplate",
   "module": "src/index.ts",
+  "scripts": {
+    "start": "bun run src/index.ts"
+  },
   "type": "module",
   "private": true,
   "devDependencies": {
