@@ -1,4 +1,4 @@
-import { runAgent } from "./agents/BootstrapAgent.ts";
+import { BootstrapAgent } from "@/agents/BootstrapAgent.ts";
 
 console.log("Starting Agent Boilerplate...");
 
@@ -12,6 +12,7 @@ if (!process.env.OPENAI_API_KEY) {
 }
 
 // Example interaction
-await runAgent(
+const agent = new BootstrapAgent();
+await agent.run(
   "Can you tell me details about the current system execution environment?"
 );
